@@ -1,0 +1,69 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.2"
+
+    defaultConfig {
+        applicationId "com.example.woops.cookit"
+        minSdkVersion 16
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+
+}
+task copyJniLibs(type: Copy) {
+    from 'libs/armeabi'
+    into 'src/main/jniLibs/armeabi'
+}
+tasks.withType(JavaCompile) {
+    compileTask -> compileTask.dependsOn(copyJniLibs)
+}
+clean.dependsOn 'cleanCopyJniLibs'
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:23.3.0'
+    compile 'com.android.support:design:23.3.0'
+    compile 'de.hdodenhof:circleimageview:1.3.0'
+    compile 'com.getbase:floatingactionbutton:1.10.1'
+    compile 'com.nightonke:boommenu:1.0.8'
+    compile('com.github.florent37:materialviewpager:1.1.3@aar') {
+        transitive = true
+    }
+    compile 'de.hdodenhof:circleimageview:2.0.0'
+    compile 'com.balysv:material-ripple:1.0.2'
+    compile 'net.steamcrafted:materialiconlib:1.0.8'
+    // animation
+    compile 'com.nineoldandroids:library:2.4.0'
+    compile 'com.daimajia.easing:library:1.0.1@aar'
+    compile 'com.daimajia.androidanimations:library:1.1.3@aar'
+    // image slider
+    compile 'com.android.support:support-v4:+'
+    compile 'com.squareup.picasso:picasso:2.3.2'
+    compile 'com.daimajia.slider:library:1.1.5@aar'
+    // ripple effect
+    compile 'com.balysv:material-ripple:1.0.2'
+    // expandable layout
+    compile 'com.github.aakira:expandable-layout:1.4.1@aar'
+    // guillotine menu
+    compile 'com.balysv.materialmenu:material-menu:1.5.4'
+    // snack bar
+    compile 'com.nispok:snackbar:2.11.+'
+    // toasts
+    compile 'com.github.johnpersano:supertoasts:1.3.4@aar'
+    // logo
+    compile 'com.koushikdutta.ion:ion:2.+'
+    compile files('libs/Msc.jar')
+    compile 'link.fls:swipestack:0.3.0'
+    compile 'com.android.support:cardview-v7:23.3.0'
+    compile 'com.squareup.picasso:picasso:2.5.2'
+}
