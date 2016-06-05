@@ -22,7 +22,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class RecyclerViewFragment extends Fragment {
+public class RecyclerViewFragment1 extends Fragment {
     private RecyclerView mRecyclerView;
     private RecyclerView.Adapter mAdapter;
 
@@ -30,8 +30,8 @@ public class RecyclerViewFragment extends Fragment {
 
     private List<NewsItem> mList = new ArrayList<>();
 
-    public static RecyclerViewFragment newInstance() {
-        return new RecyclerViewFragment();
+    public static RecyclerViewFragment1 newInstance() {
+        return new RecyclerViewFragment1();
     }
 
     @Override
@@ -54,50 +54,16 @@ public class RecyclerViewFragment extends Fragment {
 //            mList.add(item);
 //        }
         NewsItem item0 = new NewsItem();
-        item0.setPic(R.drawable.egg);
-        item0.setDesc("番茄鸡蛋，具有滋补、美容的功效");
+        item0.setPic(R.drawable.hongzao);
+        item0.setDesc("红枣补血养颜粥,调理气血,排毒养颜");
         mList.add(item0);
 
         NewsItem item1 = new NewsItem();
-        item1.setPic(R.drawable.huang);
-        item1.setDesc("凉拌黄瓜，润肺止咳、补气");
+        item1.setPic(R.drawable.soup);
+        item1.setDesc("香菇鸡汤,清香味鲜");
         mList.add(item1);
 
-        NewsItem item2 = new NewsItem();
-        item2.setPic(R.drawable.ss);
-        item2.setDesc("椒盐虾，补肾壮阳，通乳抗毒");
-        mList.add(item2);
 
-        NewsItem item3 = new NewsItem();
-        item3.setPic(R.drawable.eggpie);
-        item3.setDesc("香煎土豆丝鸡蛋饼，防止中风、和胃健脾");
-        mList.add(item3);
-
-        NewsItem item4 = new NewsItem();
-        item4.setPic(R.drawable.redmeat);
-        item4.setDesc("红烧肉，提供优质蛋白质和必需的脂肪酸");
-        mList.add(item4);
-
-        NewsItem item5 = new NewsItem();
-        item5.setPic(R.drawable.bbeaf);
-        item5.setDesc("土豆炖牛肉，健脾养胃，强筋壮骨");
-        mList.add(item5);
-
-
-        NewsItem item7 = new NewsItem();
-        item7.setPic(R.drawable.chicken);
-        item7.setDesc("板栗鸡，益气血、养胃、补肾、健肝脾");
-        mList.add(item7);
-
-        NewsItem item8 = new NewsItem();
-        item8.setPic(R.drawable.fish);
-        item8.setDesc("清炖鲫鱼，温胃止痛");
-        mList.add(item8);
-
-        NewsItem item9 = new NewsItem();
-        item9.setPic(R.drawable.pork);
-        item9.setDesc("北京烤鸭，抗脚气病，抗衰老");
-        mList.add(item9);
 
 
 

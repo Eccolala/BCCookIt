@@ -4,7 +4,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentStatePagerAdapter;
@@ -26,6 +25,9 @@ import com.daimajia.slider.library.SliderTypes.BaseSliderView;
 import com.example.woops.cookit.R;
 import com.example.woops.cookit.activity.EquDetailAty.FirstEquAty;
 import com.example.woops.cookit.fragment.RecyclerViewFragment;
+import com.example.woops.cookit.fragment.RecyclerViewFragment1;
+import com.example.woops.cookit.fragment.RecyclerViewFragment3;
+import com.example.woops.cookit.fragment.RecyclerViewFragment4;
 import com.example.woops.cookit.util.CoCoinUtil;
 import com.example.woops.cookit.util.CustomSliderView;
 import com.github.florent37.materialviewpager.MaterialViewPager;
@@ -165,12 +167,14 @@ public class FirstActivity extends AppCompatActivity {
             @Override
             public Fragment getItem(int position) {
                 switch (position % 4) {
-                    //case 0:
-                    //    return RecyclerViewFragment.newInstance();
-                    //case 1:
-                    //    return RecyclerViewFragment.newInstance();
-                    //case 2:
-                    //    return WebViewFragment.newInstance();
+                    case 0:
+                        return RecyclerViewFragment1.newInstance();
+                    case 1:
+                        return RecyclerViewFragment.newInstance();
+                    case 2:
+                        return RecyclerViewFragment3.newInstance();
+                    case 3:
+                        return RecyclerViewFragment4.newInstance();
                     default:
                         return RecyclerViewFragment.newInstance();
                 }
@@ -185,13 +189,13 @@ public class FirstActivity extends AppCompatActivity {
             public CharSequence getPageTitle(int position) {
                 switch (position % 7) {
                     case 0:
-                        return "库存推荐";
+                        return "母婴专区";
                     case 1:
-                        return "食疗养生";
+                        return "库存推荐";
                     case 2:
                         return "美容瘦身";
                     case 3:
-                        return "母婴专区";
+                        return "食疗养生";
                 }
                 return "";
             }
@@ -207,19 +211,19 @@ public class FirstActivity extends AppCompatActivity {
                     case 0:
                         return HeaderDesign.fromColorResAndUrl(
                                 R.color.red,
-                                "http://image.codes51.com/Article/image/20160417/20160417101809_0472.jpg");
+                                "http://www.yys100.com/f_manage/edit/UploadFile/2015810232831432.JPG");
                     case 1:
                         return HeaderDesign.fromColorResAndUrl(
                                 R.color.green,
-                                "http://i3.sinaimg.cn/lx/2012/1114/U6626P622DT20121114162756_1.jpg");
+                                "http://tgi1.jia.com/112/664/12664172.jpg");
                     case 2:
                         return HeaderDesign.fromColorResAndUrl(
-                                R.color.red,
-                                "http://image1.nphoto.net/news/image/201203/c8524a2fb7b2ba6f.jpg");
+                                R.color.default_fill_color,
+                                "http://img01.baimao.com/M01/2D/90/wKgAFFOjiyKAGRV0AAHdKAwVdSo287.jpg");
                     case 3:
                         return HeaderDesign.fromColorResAndUrl(
                                 R.color.default_fill_color,
-                                "http://img4.imgtn.bdimg.com/it/u=1516802001,136721947&fm=21&gp=0.jpg");
+                                "http://image.enmuo.com/CMS/2012/03/30/1/CMS_120330165310136_1E_600x400.jpg");
                 }
 
                 //execute others actions if needed (ex : modify your header logo)
@@ -300,15 +304,15 @@ public class FirstActivity extends AppCompatActivity {
             drawables[i] = ContextCompat.getDrawable(mContext, drawablesResource[i]);
 
         String[] STRINGS = new String[]{
-                "Mark",
-                "Refresh",
-                "Copy",
-                "Heart",
-                "Info",
-                "Like",
-                "Record",
-                "Search",
-                "Settings"
+                "收藏",
+                "刷新",
+                "保存",
+                "点赞",
+                "信息",
+                "分享",
+                "视频",
+                "搜索",
+                "设置"
         };
         String[] strings = new String[number];
         for (int i = 0; i < number; i++)
@@ -353,14 +357,8 @@ public class FirstActivity extends AppCompatActivity {
                 .onSubButtonClick(new BoomMenuButton.OnSubButtonClickListener() {
                     @Override
                     public void onClick(int buttonIndex) {
-                        if (buttonIndex == 0) {
+                        if (buttonIndex == 7) {
                            startActivity(new Intent(mContext,ItaActivity.class));
-                        } else if (buttonIndex == 1) {
-                            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(
-                                    "https://github.com/Nightonke/BoomMenu")));
-                        } else if (buttonIndex == 2) {
-                            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(
-                                    "https://github.com/Nightonke")));
                         }
                     }
                 })

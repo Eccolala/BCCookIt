@@ -54,7 +54,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="TtsAct"
+            android:text="结束"
             android:textSize="20sp"
             android:onClick="ttsClick"/>
 
