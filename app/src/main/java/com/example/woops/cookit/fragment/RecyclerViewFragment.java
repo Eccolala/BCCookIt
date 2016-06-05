@@ -59,7 +59,7 @@ public class RecyclerViewFragment extends Fragment {
         mList.add(item0);
 
         NewsItem item1 = new NewsItem();
-        item1.setPic(R.drawable.redmeat);
+        item1.setPic(R.drawable.huang);
         item1.setDesc("锅包肉锅包肉锅包肉锅包肉");
         mList.add(item1);
 
@@ -69,12 +69,12 @@ public class RecyclerViewFragment extends Fragment {
         mList.add(item2);
 
         NewsItem item3 = new NewsItem();
-        item3.setPic(R.drawable.egg);
+        item3.setPic(R.drawable.eggpie);
         item3.setDesc("锅包肉锅包肉锅包肉锅包肉");
         mList.add(item3);
 
         NewsItem item4 = new NewsItem();
-        item4.setPic(R.drawable.huang);
+        item4.setPic(R.drawable.redmeat);
         item4.setDesc("锅包肉锅包肉锅包肉锅包肉");
         mList.add(item4);
 
@@ -84,7 +84,7 @@ public class RecyclerViewFragment extends Fragment {
         mList.add(item5);
 
         NewsItem item6 = new NewsItem();
-        item6.setPic(R.drawable.egg);
+        item6.setPic(R.drawable.brocooli);
         item6.setDesc("锅包肉锅包肉锅包肉锅包肉");
         mList.add(item6);
 

@@ -185,13 +185,13 @@ public class FirstActivity extends AppCompatActivity {
             public CharSequence getPageTitle(int position) {
                 switch (position % 7) {
                     case 0:
-                        return "营养早餐";
+                        return "库存推荐";
                     case 1:
-                        return "老人餐";
+                        return "食疗养生";
                     case 2:
-                        return "儿童餐";
+                        return "美容瘦身";
                     case 3:
-                        return "病人餐";
+                        return "母婴专区";
                 }
                 return "";
             }
