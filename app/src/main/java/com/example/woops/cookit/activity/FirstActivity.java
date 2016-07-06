@@ -23,7 +23,6 @@ import com.daimajia.slider.library.Indicators.PagerIndicator;
 import com.daimajia.slider.library.SliderLayout;
 import com.daimajia.slider.library.SliderTypes.BaseSliderView;
 import com.example.woops.cookit.R;
-import com.example.woops.cookit.activity.EquDetailAty.FirstEquAty;
 import com.example.woops.cookit.fragment.RecyclerViewFragment;
 import com.example.woops.cookit.fragment.RecyclerViewFragment1;
 import com.example.woops.cookit.fragment.RecyclerViewFragment3;
@@ -58,6 +57,13 @@ public class FirstActivity extends AppCompatActivity {
     //设置BoomMenu
     private boolean init = false;
     private BoomMenuButton boomMenuButton;
+
+    //打开第三方app的包名
+    public static final String EQUEMENT_PACKAGE_NAME = "mr_immortalz.com.modelqq";
+    public static final String OPENCV_PACKAGE_NAME = "com.example.woops.opencvtest";
+    public static final String AR_PACKAGE_NAME = "cn.easyar.samples.helloarvideo";
+    public static final String STORE_PACKAGE_NAME = "com.just.firstapp";
+    public static final String NEU_PACKAGE_NAME = "lecho.lib.hellocharts.samples";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -104,14 +110,40 @@ public class FirstActivity extends AppCompatActivity {
                 startActivity(new Intent(mContext, ComtyActivity.class));
             }
         });
-        //设备页面
+        //厨房设备管理设备页面
         MaterialRippleLayout eleEquipment = (MaterialRippleLayout) findViewById(R.id.ele_equ_layout);
         eleEquipment.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(mContext, FirstEquAty.class));
+                mContext.startActivity(mContext.getPackageManager().getLaunchIntentForPackage(EQUEMENT_PACKAGE_NAME));
             }
         });
+        //easyAR采购助手
+        MaterialRippleLayout arHelper = (MaterialRippleLayout) findViewById(R.id.arbuy_layout);
+        arHelper.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mContext.startActivity(mContext.getPackageManager().getLaunchIntentForPackage(AR_PACKAGE_NAME));
+            }
+        });
+        //库存管理
+        MaterialRippleLayout storeHelper = (MaterialRippleLayout) findViewById(R.id.store_layout);
+        storeHelper.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mContext.startActivity(mContext.getPackageManager().getLaunchIntentForPackage(STORE_PACKAGE_NAME));
+            }
+        });
+        //营养跟踪
+        MaterialRippleLayout neuHelper = (MaterialRippleLayout) findViewById(R.id.report_layout);
+        neuHelper.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mContext.startActivity(mContext.getPackageManager().getLaunchIntentForPackage(NEU_PACKAGE_NAME));
+            }
+        });
+
+
     }
 
     private void setSlider() {
@@ -358,7 +390,7 @@ public class FirstActivity extends AppCompatActivity {
                     @Override
                     public void onClick(int buttonIndex) {
                         if (buttonIndex == 7) {
-                           startActivity(new Intent(mContext,ItaActivity.class));
+                            startActivity(new Intent(mContext, ItaActivity.class));
                         }
                     }
                 })

@@ -23,7 +23,6 @@ public class CookitDB {
     private SQLiteDatabase db;
 
 
-
     /**
      * 构造方法私有化
      */
@@ -55,7 +54,7 @@ public class CookitDB {
             values.put("surplus", store.getSurplus());
             values.put("measure", store.getMeasure());
             db.insert("store", null, values); // 插入第一条数据
-            Log.d("MY","插入数据成功");
+            Log.d("MY", "插入数据成功");
         }
     }
 
@@ -108,12 +107,13 @@ public class CookitDB {
         cursor.close();
 
     }
+
     /**
      * 数据库删除测试
      */
-    public void deleteDataBaseTest(){
+    public void deleteDataBaseTest() {
         db.delete("store", null, null);
-        Log.d("MY","删除数据成功");
+        Log.d("MY", "删除数据成功");
     }
 
 }

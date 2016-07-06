@@ -26,13 +26,14 @@
 
     <string name="custom_view">我的社区</string>
     <string name="tags_view">厨房电器管理</string>
-    <string name="months_view">AR视频</string>
+    <string name="months_view">AR采购助手</string>
     <string name="list_view">库存管理</string>
-    <string name="expense_report">营养跟踪</string>
+    <string name="expense_report">饮食营养分析</string>
     <string name="sync">同步到服务器</string>
     <string name="settings">设置</string>
     <string name="help">帮助</string>
     <string name="feedback">反馈</string>
     <string name="about">关于</string>
     <string name="other_transition_name">transition_reveal</string>
+    <string name="arnue">AR营养分析</string>
 </resources>

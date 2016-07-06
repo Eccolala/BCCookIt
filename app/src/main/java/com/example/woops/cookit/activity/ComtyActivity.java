@@ -59,13 +59,16 @@ public class ComtyActivity extends AppCompatActivity implements SwipeStack.Swipe
     }
 
     private void fillWithTestData() {
-        for (int x = 0; x < 4; x++) {
+//        for (int x = 0; x < 4; x++) {
+            mData.add("这个汉堡真的很美味，强烈推荐！！！");
+            mData.add("这道苦瓜真的很好吃，强烈推荐！！！");
             mData.add("这道菜真的很好吃，强烈推荐！！！");
-        }
+            mData.add("这道番茄炒蛋很好吃，强烈推荐！！！");
+
         mImg.add(R.drawable.food_01);
-        mImg.add(R.drawable.food_02);
+        mImg.add(R.drawable.kugua);
         mImg.add(R.drawable.food_04);
-        mImg.add(R.drawable.food_03);
+        mImg.add(R.drawable.egg);
     }
 
 
