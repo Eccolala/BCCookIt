@@ -64,6 +64,7 @@ public class FirstActivity extends AppCompatActivity {
     public static final String AR_PACKAGE_NAME = "cn.easyar.samples.helloarvideo";
     public static final String STORE_PACKAGE_NAME = "com.just.firstapp";
     public static final String NEU_PACKAGE_NAME = "lecho.lib.hellocharts.samples";
+    public static final String CAP_PACKAGE_NAME = "com.just.learnintentservice";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -134,7 +135,7 @@ public class FirstActivity extends AppCompatActivity {
                 mContext.startActivity(mContext.getPackageManager().getLaunchIntentForPackage(STORE_PACKAGE_NAME));
             }
         });
-        //营养跟踪
+        //饮食营养分享
         MaterialRippleLayout neuHelper = (MaterialRippleLayout) findViewById(R.id.report_layout);
         neuHelper.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -143,6 +144,22 @@ public class FirstActivity extends AppCompatActivity {
             }
         });
 
+        //opencv
+        MaterialRippleLayout cvHelper = (MaterialRippleLayout) findViewById(R.id.open_layout);
+        cvHelper.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mContext.startActivity(mContext.getPackageManager().getLaunchIntentForPackage(OPENCV_PACKAGE_NAME));
+            }
+        });
+        //厨房监控
+        MaterialRippleLayout keepHelper = (MaterialRippleLayout) findViewById(R.id.sync_layout);
+        keepHelper.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mContext.startActivity(mContext.getPackageManager().getLaunchIntentForPackage(CAP_PACKAGE_NAME));
+            }
+        });
 
     }
 
