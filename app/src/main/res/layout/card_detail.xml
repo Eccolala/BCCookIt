@@ -76,14 +76,6 @@
                 android:text="2天前"
                 android:textColor="#aaaaaa"
                 android:textSize="12sp" />
-            <!--
-                 <TextView
-				android:paddingLeft="5dip"
-				android:layout_toRightOf="@id/publish_time"
-				android:layout_width="wrap_content"
-				android:layout_height="wrap_content"
-				android:text="来自POCO相机" />
-            -->
 
             <TextView
                 android:id="@+id/praise"
@@ -99,8 +91,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
-                android:background="@drawable/likeicon"
-                android:focusable="true" />
+                android:background="@drawable/button_selector"
+                android:focusable="true"
+                />
         </RelativeLayout>
     </LinearLayout>
 

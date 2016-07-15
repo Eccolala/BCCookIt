@@ -20,6 +20,14 @@ android {
 
 
 }
+
+
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+}
+
 task copyJniLibs(type: Copy) {
     from 'libs/armeabi'
     into 'src/main/jniLibs/armeabi'
@@ -66,4 +74,8 @@ dependencies {
     compile 'link.fls:swipestack:0.3.0'
     compile 'com.android.support:cardview-v7:23.3.0'
     compile 'com.squareup.picasso:picasso:2.5.2'
+
+    compile 'com.sackcentury:shinebutton:0.1.2'
+
+
 }

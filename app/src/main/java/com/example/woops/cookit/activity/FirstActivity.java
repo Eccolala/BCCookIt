@@ -152,6 +152,15 @@ public class FirstActivity extends AppCompatActivity {
                 mContext.startActivity(mContext.getPackageManager().getLaunchIntentForPackage(OPENCV_PACKAGE_NAME));
             }
         });
+        //AR大厨
+        MaterialRippleLayout ARcook = (MaterialRippleLayout) findViewById(R.id.gesture_change);
+        ARcook.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(mContext,VideoAty.class));
+            }
+        });
+
         //厨房监控
         MaterialRippleLayout keepHelper = (MaterialRippleLayout) findViewById(R.id.sync_layout);
         keepHelper.setOnClickListener(new View.OnClickListener() {

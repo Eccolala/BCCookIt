@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -33,6 +34,8 @@ public class ComtyActivity extends AppCompatActivity implements SwipeStack.Swipe
     private ArrayList<Integer> mImg;
     private SwipeStack mSwipeStack;
     private SwipeStackAdapter mAdapter;
+    private ImageButton like;
+
 
     // 心型气泡
     private PeriscopeLayout periscopeLayout;
@@ -41,6 +44,9 @@ public class ComtyActivity extends AppCompatActivity implements SwipeStack.Swipe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_comty);
+
+        like = (ImageButton)findViewById(R.id.imgButton);
+
 
         mSwipeStack = (SwipeStack) findViewById(R.id.swipeStack);
 //        mButtonLeft = (Button) findViewById(R.id.buttonSwipeLeft);
